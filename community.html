@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cộng đồng & Kết nối | Eco-Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .club-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+        .club-card:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-strong);
+        }
+        .club-image {
+            height: 200px;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .club-info {
+            padding: 2rem;
+        }
+        .testimonial-section {
+            background: var(--primary-light);
+            color: var(--white);
+            padding: 8rem 0;
+            border-radius: 60px;
+            margin: 4rem 0;
+        }
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonial-card p {
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Seoul<span>Study</span></a>
+            <nav class="nav">
+                <a href="program.html">Program</a>
+                <a href="internship.html">Internship</a>
+                <a href="community.html">Community</a>
+                <a href="wellness.html">Wellness</a>
+            </nav>
+            <button class="btn btn-primary">Join us</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero secondary-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge fade-in" style="background: var(--accent); position: static; display: inline-block; margin-bottom: 1rem;">Better Together</span>
+                    <h1 class="fade-in">Ngôi Nhà<br><span class="italic">Thứ Hai</span></h1>
+                    <p class="fade-in delay-1">Hàn Quốc sẽ không còn xa lạ khi bạn có những người bạn đồng hành tuyệt vời từ khắp nơi trên thế giới.</p>
+                </div>
+                <div class="hero-image fade-in float-anim">
+                    <img src="hero.png" alt="Student Community" style="border-radius: 40px; width: 100%; box-shadow: var(--shadow-strong);">
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="container">
+                <h2 class="section-title">Câu Lạc Bộ Nổi Bật</h2>
+                <div class="club-grid">
+                    <div class="club-card fade-up">
+                        <div class="club-image">🎸</div>
+                        <div class="club-info">
+                            <h3>K-Wave Music</h3>
+                            <p>Dành cho các tín đồ âm nhạc và nhảy hiện đại.</p>
+                        </div>
+                    </div>
+                    <div class="club-card fade-up delay-1">
+                        <div class="club-image">🥘</div>
+                        <div class="club-info">
+                            <h3>Seoul Foodies</h3>
+                            <p>Khám phá ẩm thực đường phố và học nấu món Hàn.</p>
+                        </div>
+                    </div>
+                    <div class="club-card fade-up delay-2">
+                        <div class="club-image">📸</div>
+                        <div class="club-info">
+                            <h3>City Explorers</h3>
+                            <p>Chụp ảnh và ghi lại những khoảnh khắc đẹp tại Seoul.</p>
+                        </div>
+                    </div>
+                    <div class="club-card fade-up delay-3">
+                        <div class="club-image">🌍</div>
+                        <div class="club-info">
+                            <h3>Global Network</h3>
+                            <p>Giao lưu văn hóa và phát triển kỹ năng lãnh đạo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="testimonial-card fade-in">
+                    <p>"SeoulStudy đã giúp tôi tìm thấy những người bạn thân thiết nhất và biến quãng đời sinh viên của tôi trở nên vô cùng ý nghĩa."</p>
+                    <strong>- Minh Anh, Sinh viên năm 3</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">Seoul<span>Study</span></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StudyKorea Eco-Futurism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

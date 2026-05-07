@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cơ hội Thực tập Toàn cầu | Eco-Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .partner-section {
+            background: var(--white);
+            padding: 6rem 0;
+            overflow: hidden;
+        }
+        .partner-track {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            opacity: 0.5;
+            animation: scroll 20s linear infinite;
+            width: max-content;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .partner-track h3 {
+            font-size: 2rem;
+            white-space: nowrap;
+            color: var(--primary);
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--secondary);
+            opacity: 0.3;
+        }
+        .timeline-item {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .timeline-content {
+            width: 45%;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Seoul<span>Study</span></a>
+            <nav class="nav">
+                <a href="program.html">Program</a>
+                <a href="internship.html">Internship</a>
+                <a href="community.html">Community</a>
+                <a href="wellness.html">Wellness</a>
+            </nav>
+            <button class="btn btn-primary">Join us</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero secondary-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge fade-in" style="background: var(--primary); color: var(--white); position: static; display: inline-block; margin-bottom: 1rem;">Career Launchpad</span>
+                    <h1 class="fade-in">Kết Nối<br><span class="italic">Doanh Nghiệp</span></h1>
+                    <p class="fade-in delay-1">Chúng tôi không chỉ dạy bạn kiến thức, chúng tôi mở cánh cửa đưa bạn vào những môi trường làm việc chuyên nghiệp nhất thế giới.</p>
+                </div>
+                <div class="hero-image fade-in float-anim">
+                    <img src="desk.png" alt="Office Space" style="border-radius: 40px; width: 100%; box-shadow: var(--shadow-strong);">
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-section">
+            <div class="partner-track">
+                <h3>SAMSUNG</h3><h3>LG ELECTRONICS</h3><h3>HYUNDAI</h3><h3>NAVER</h3><h3>KAKAO</h3><h3>LINE</h3>
+                <h3>SAMSUNG</h3><h3>LG ELECTRONICS</h3><h3>HYUNDAI</h3><h3>NAVER</h3><h3>KAKAO</h3><h3>LINE</h3>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="container">
+                <h2 class="section-title">Quy trình 4 Bước</h2>
+                <div class="timeline">
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-content">
+                            <h4>Định hướng Nghề nghiệp</h4>
+                            <p>Phân tích thế mạnh và mong muốn của bạn để chọn lĩnh vực phù hợp.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up delay-1">
+                        <div class="timeline-content">
+                            <h4>Đào tạo Kỹ năng</h4>
+                            <p>Học cách viết CV chuẩn Hàn và các kỹ năng giao tiếp công sở.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up delay-2">
+                        <div class="timeline-content">
+                            <h4>Phỏng vấn & Kết nối</h4>
+                            <p>Tham gia các buổi phỏng vấn trực tiếp với các nhà tuyển dụng đối tác.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up delay-3">
+                        <div class="timeline-content">
+                            <h4>Trải nghiệm Thực tế</h4>
+                            <p>Bắt đầu 3-6 tháng thực tập có lương tại các doanh nghiệp hàng đầu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">Seoul<span>Study</span></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StudyKorea Eco-Futurism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
