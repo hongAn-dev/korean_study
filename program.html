@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .program-detail {
             display: grid;
@@ -21,7 +22,8 @@
         }
         .program-list li {
             padding: 1.5rem;
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
             margin-bottom: 1rem;
             border-radius: 16px;
             display: flex;
@@ -34,6 +36,18 @@
             transform: scale(1.02);
             box-shadow: var(--shadow-strong);
         }
+        .icon svg {
+            width: 3rem;
+            height: 3rem;
+            stroke-width: 1.5px;
+        }
+
+        .icon-small svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }            
         .program-list .number {
             width: 40px;
             height: 40px;
@@ -48,6 +62,10 @@
     </style>
 </head>
 <body>
+    <div class="bg-decor"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo" style="text-decoration: none;">Seoul<span>Study</span></a>
@@ -62,16 +80,11 @@
     </header>
 
     <main>
-        <section class="hero secondary-hero">
+        <section class="secondary-hero">
             <div class="container">
-                <div class="hero-content">
-                    <span class="badge fade-in" style="position: static; margin-bottom: 1rem; display: inline-block;">Education 4.0</span>
-                    <h1 class="fade-in">Lộ Trình Học Tập<br><span class="italic">Tương Lai</span></h1>
-                    <p class="fade-in delay-1">Hệ thống giáo dục tiên tiến kết hợp giữa lý thuyết hàn lâm và kỹ năng thực tế, được thiết kế riêng cho sinh viên quốc tế tại Hàn Quốc.</p>
-                </div>
-                <div class="hero-image fade-in float-anim">
-                    <img src="campus.png" alt="Korean Campus" style="border-radius: 40px; width: 100%; box-shadow: var(--shadow-strong);">
-                </div>
+                <span class="tag">Academic Excellence</span>
+                <h1 class="fade-in">Lộ Trình Học Tập<br><span class="italic">Tương Lai</span></h1>
+                <p class="fade-in delay-1">Hệ thống giáo dục tiên tiến kết hợp giữa lý thuyết hàn lâm và kỹ năng thực tế, được thiết kế riêng cho sinh viên quốc tế tại Hàn Quốc.</p>
             </div>
         </section>
 
@@ -107,22 +120,22 @@
                     <div class="content">
                         <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Tại sao chọn<br>Chương trình của chúng tôi?</h2>
                         <ul class="program-list">
-                            <li class="stagger-item delay-1">
-                                <span class="number">01</span>
+                             <li class="stagger-item delay-1">
+                                <div class="number"><i data-lucide="graduation-cap"></i></div>
                                 <div>
                                     <h4>Bằng cấp Quốc tế</h4>
                                     <p>Chứng chỉ được công nhận toàn cầu bởi các tổ chức giáo dục uy tín.</p>
                                 </div>
                             </li>
-                            <li class="stagger-item delay-2">
-                                <span class="number">02</span>
+                             <li class="stagger-item delay-2">
+                                <div class="number"><i data-lucide="book-open-check"></i></div>
                                 <div>
                                     <h4>Học tập Trải nghiệm</h4>
                                     <p>Hơn 40% thời lượng là các dự án thực tế và tham quan doanh nghiệp.</p>
                                 </div>
                             </li>
-                            <li class="stagger-item delay-3">
-                                <span class="number">03</span>
+                             <li class="stagger-item delay-3">
+                                <div class="number"><i data-lucide="headset"></i></div>
                                 <div>
                                     <h4>Hỗ trợ 24/7</h4>
                                     <p>Đội ngũ mentor luôn sẵn sàng hỗ trợ bạn trong cả học tập và đời sống.</p>
@@ -163,6 +176,7 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in, .fade-up, .stagger-item').forEach(el => observer.observe(el));
+        lucide.createIcons();
     </script>
 </body>
 </html>
