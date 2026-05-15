@@ -82,7 +82,7 @@ export default function Home() {
                 ))}
               </div>
               <div>
-                <p className="font-bold text-lg text-primary">1500+ Sinh viên</p>
+                <p className="font-bold text-lg text-primary">1000+ Học viên</p>
                 <p className="text-sm text-text-muted">Đã thành công cùng HanKang</p>
               </div>
             </motion.div>
