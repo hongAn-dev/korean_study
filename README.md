@@ -1,32 +1,36 @@
-# Eco-Future Landing Page - Korean Study Project
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Dự án này là một trang landing page cao cấp được xây dựng bằng HTML, CSS và JavaScript, tập trung vào trải nghiệm người dùng và thẩm mỹ hiện đại.
+## Getting Started
 
-## 📁 Cấu trúc thư mục
-- `index.html`: Cấu trúc nội dung chính của trang web.
-- `style.css`: Các định nghĩa về phong cách và bố cục (CSS).
-- `program.html`, `internship.html`, `community.html`, `wellness.html`: Các trang con chi tiết.
-- `hero.png`, `desk.png`, `campus.png`: Các tài nguyên hình ảnh.
+First, run the development server:
 
-## 🚀 Cách chạy dự án
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Cách 1: Chạy trực tiếp (Đơn giản nhất)
-1. Truy cập vào thư mục chứa dự án.
-2. Chuột phải vào tệp `index.html`.
-3. Chọn **Open with** (Mở với) và chọn trình duyệt của bạn (Chrome, Edge, Firefox, v.v.).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Cách 2: Sử dụng Local Server (Khuyên dùng)
-Nếu bạn muốn trải nghiệm các hiệu ứng mượt mà nhất và tránh lỗi đường dẫn hình ảnh trong một số trường hợp, bạn nên sử dụng một máy chủ cục bộ:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-**Sử dụng VS Code (Live Server):**
-1. Mở thư mục này bằng VS Code.
-2. Cài đặt Extension **Live Server**.
-3. Nhấn vào nút **Go Live** ở góc dưới cùng bên phải của VS Code.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-**Sử dụng Node.js (npx):**
-1. Mở Terminal (PowerShell hoặc Command Prompt).
-2. Chạy lệnh: `npx serve .`
-3. Truy cập vào địa chỉ `http://localhost:3000` (hoặc cổng mà Terminal hiển thị).
+## Learn More
 
----
-**Lưu ý:** Các hiệu ứng chuyển động (scroll animation) sẽ tự động kích hoạt khi bạn cuộn chuột xuống các phần bên dưới của trang web.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
