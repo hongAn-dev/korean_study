@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 import { Building2, Handshake, Users2 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import KoreaMap from '@/components/KoreaMap';
 
 export default function Partners() {
   return (
     <main className="min-h-screen bg-transparent">
       <Navbar />
 
-      <section className="pt-40 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-40 pb-20 overflow-hidden">
+        <div className="w-full text-center px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -35,23 +36,8 @@ export default function Partners() {
             Sự uy tín của Du Học HanKang được khẳng định thông qua mối quan hệ hợp tác trực tiếp và bền chặt với 25+ trường Đại học và Tập đoàn danh giá hàng đầu tại Hàn Quốc.
           </motion.p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              "Đại học Konkuk", "Đại học Keimyung", "Đại học Korea",
-              "Đại học Nữ Duksung", "Đại học Gachon", "Đại học Gangseo",
-              "Đại học Kangwon", "Đại học Ajou", "Đại học Kyungil",
-              "Đại học Quốc gia Kongju", "Đại học Quốc gia Kunsan", "Đại học Gimcheon"
-            ].map((univ, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-white/40 backdrop-blur-md rounded-3xl flex items-center justify-center p-8 h-40 border border-border grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:border-secondary hover:shadow-xl transition-all duration-500 cursor-default"
-              >
-                <span className="font-bold text-center text-primary text-lg">{univ}</span>
-              </motion.div>
-            ))}
+          <div className="mt-12">
+            <KoreaMap />
           </div>
         </div>
       </section>

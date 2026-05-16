@@ -257,10 +257,10 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { name: "Mr. Binh", role: "Founder & CEO", img: "https://i.pravatar.cc/300?img=11" },
-              { name: "Ms. Mai Anh", role: "Trưởng phòng hồ sơ", img: "https://i.pravatar.cc/300?img=32" },
-              { name: "Mrs. Thuy", role: "Cố vấn văn hóa", img: "https://i.pravatar.cc/300?img=12" },
-              { name: "Mrs. Thanh", role: "Chuyên gia Visa", img: "https://i.pravatar.cc/300?img=44" },
+              { name: "Mr. Binh", role: "Founder & CEO", img: "/ava.ceo.jpg" },
+              { name: "Ms. Mai Anh", role: "Trưởng phòng hồ sơ", img: "/maianh-ceo.jpg" },
+              { name: "Mrs. Thuy", role: "Cố vấn văn hóa", img: "/av-thuy.png" },
+              { name: "Mrs. Thanh", role: "Chuyên gia Visa", img: "/av-thanh.png" },
             ].map((member, i) => (
               <motion.div key={i} whileHover={{ y: -10 }} className="text-center">
                 <div className="mb-6 relative group">
